@@ -230,7 +230,7 @@ mod_gnome_shell_config_for_keybind_custom () {
 
 	## ### Text Editor
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/text-editor/name "'Text_Editor'"
-	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/text-editor/command "'gnome-text-editor'"
+	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/text-editor/command "'gedit'"
 	dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/text-editor/binding "'<Shift><Alt>e'"
 
 
@@ -524,11 +524,11 @@ mod_tool_gnome_terminal_config_for_profile () {
 
 	gsettings set "${path}" use-theme-colors false
 
-	gsettings set "${path}" use-theme-transparency false
+	#gsettings set "${path}" use-theme-transparency false
 
-	gsettings set "${path}" use-transparent-background true
+	#gsettings set "${path}" use-transparent-background true
 
-	gsettings set "${path}" background-transparency-percent 15
+	#gsettings set "${path}" background-transparency-percent 15
 
 	#gsettings set "${path}" foreground-color 'rgb(255,255,255)'
 
@@ -653,7 +653,7 @@ mod_tool_gedit_config () {
 
 	gsettings set org.gnome.gedit.preferences.editor auto-save-interval 10
 
-	gsettings set org.gnome.gedit.preferences.editor background-pattern 'none'
+	#gsettings set org.gnome.gedit.preferences.editor background-pattern 'none'
 
 	gsettings set org.gnome.gedit.preferences.editor bracket-matching true
 
@@ -677,7 +677,13 @@ mod_tool_gedit_config () {
 
 	gsettings set org.gnome.gedit.preferences.editor right-margin-position 80
 
-	gsettings set org.gnome.gedit.preferences.editor scheme 'oblivion'
+	#gsettings set org.gnome.gedit.preferences.editor scheme 'oblivion'
+
+	gsettings set org.gnome.gedit.preferences.editor style-scheme-for-dark-theme-variant 'oblivion'
+
+	#gsettings set org.gnome.gedit.preferences.editor style-scheme-for-dark-theme-variant 'solarized-dark'
+
+	gsettings set org.gnome.gedit.preferences.editor style-scheme-for-light-theme-variant 'solarized-light'
 
 	gsettings set org.gnome.gedit.preferences.editor search-highlighting true
 
@@ -692,6 +698,18 @@ mod_tool_gedit_config () {
 	gsettings set org.gnome.gedit.preferences.editor wrap-last-split-mode 'word'
 
 	gsettings set org.gnome.gedit.preferences.editor wrap-mode 'word'
+
+
+
+
+	#gsettings set org.gnome.gedit.preferences.ui theme-variant 'system'
+
+	#gsettings set org.gnome.gedit.preferences.ui theme-variant 'light'
+
+	gsettings set org.gnome.gedit.preferences.ui theme-variant 'dark'
+
+
+
 
 
 	return 0
