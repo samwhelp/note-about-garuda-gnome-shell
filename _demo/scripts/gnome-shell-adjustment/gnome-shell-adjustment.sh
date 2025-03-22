@@ -110,6 +110,10 @@ mod_gnome_shell_config_for_keybind_main () {
 
 	#gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Alt>s', '<Alt>Right']"
 
+	#gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Alt>a', '<Alt><Control>Left']"
+
+	#gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Alt>s', '<Alt>Control>Right']"
+
 	gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Alt>a']"
 
 	gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Alt>s']"
